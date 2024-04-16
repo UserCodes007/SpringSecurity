@@ -1,7 +1,7 @@
-package Spring.Security.Sample.Repository;
+package Spring.Security.Sample.repository;
 
 
-import Spring.Security.Sample.Model.User;
+import Spring.Security.Sample.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {

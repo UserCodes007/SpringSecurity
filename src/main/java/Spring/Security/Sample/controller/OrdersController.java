@@ -1,8 +1,8 @@
-package Spring.Security.Sample.Controller;
+package Spring.Security.Sample.controller;
 
-import Spring.Security.Sample.Model.OrderRequest;
-import Spring.Security.Sample.Model.Orders;
-import Spring.Security.Sample.Service.OrdersService;
+import Spring.Security.Sample.model.OrderRequest;
+import Spring.Security.Sample.model.Orders;
+import Spring.Security.Sample.service.OrdersService;
 
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.Authentication;
@@ -18,11 +18,11 @@ import java.util.List;
 public class OrdersController {
 
     private OrdersService oService;
-    @PostMapping("/placeOrder")
+    @PostMapping
     public void add(@RequestBody List<OrderRequest> list, Authentication auth ){
         for(OrderRequest i:list) oService.add(i.getOrder(auth.getName()));
     }
-    @GetMapping("/all")
+    @GetMapping
     public List<Orders> all(Authentication auth){
         List<String>list=auth.getAuthorities().stream().map(x->x.getAuthority()).toList();
         return oService.getAll(auth.getName(),list);

@@ -1,4 +1,4 @@
-package Spring.Security.Sample.Exceptions;
+package Spring.Security.Sample.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

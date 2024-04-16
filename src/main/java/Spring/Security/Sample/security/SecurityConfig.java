@@ -1,4 +1,4 @@
-package Spring.Security.Sample.Security;
+package Spring.Security.Sample.security;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -29,11 +29,11 @@ public class SecurityConfig {
                 .and()
                 .authorizeHttpRequests((authz) -> authz
                         .requestMatchers("/login","/register").permitAll()
-                        .requestMatchers(HttpMethod.POST,"/orders/placeOrder").hasAuthority("CUSTOMER")
+                        .requestMatchers(HttpMethod.POST,"/orders").hasAuthority("CUSTOMER")
                         .requestMatchers(HttpMethod.DELETE).hasAuthority("ADMIN")
                         .requestMatchers(HttpMethod.PUT).hasAuthority("ADMIN")
-                        .requestMatchers(RegexRequestMatcher.regexMatcher("/orders/[0-9]+")).hasAuthority("USER")
-                        .requestMatchers( "/products/add").hasAuthority("ADMIN")
+                        .requestMatchers(RegexRequestMatcher.regexMatcher("/orders/[0-9]+")).hasAuthority("ADMIN")
+                        .requestMatchers( HttpMethod.POST,"/products").hasAuthority("ADMIN")
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);

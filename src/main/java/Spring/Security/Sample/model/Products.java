@@ -1,4 +1,4 @@
-package Spring.Security.Sample.Model;
+package Spring.Security.Sample.model;
 
 import jakarta.persistence.*;
 import lombok.*;

@@ -1,8 +1,8 @@
-package Spring.Security.Sample.Service;
+package Spring.Security.Sample.service;
 
-import Spring.Security.Sample.Model.AuthRequest;
-import Spring.Security.Sample.Model.User;
-import Spring.Security.Sample.Repository.UserRepository;
+import Spring.Security.Sample.model.AuthRequest;
+import Spring.Security.Sample.model.User;
+import Spring.Security.Sample.repository.UserRepository;
 import jakarta.annotation.PostConstruct;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;

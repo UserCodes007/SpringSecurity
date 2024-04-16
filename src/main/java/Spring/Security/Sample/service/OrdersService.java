@@ -1,8 +1,8 @@
-package Spring.Security.Sample.Service;
+package Spring.Security.Sample.service;
 
-import Spring.Security.Sample.Exceptions.OrderNotFoundException;
-import Spring.Security.Sample.Model.Orders;
-import Spring.Security.Sample.Repository.OrdersRepository;
+import Spring.Security.Sample.exceptions.OrderNotFoundException;
+import Spring.Security.Sample.model.Orders;
+import Spring.Security.Sample.repository.OrdersRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.util.List;

@@ -1,7 +1,7 @@
-package Spring.Security.Sample.Service;
-import Spring.Security.Sample.Exceptions.ProductNotFoundException;
-import Spring.Security.Sample.Model.Products;
-import Spring.Security.Sample.Repository.ProductsRepository;
+package Spring.Security.Sample.service;
+import Spring.Security.Sample.exceptions.ProductNotFoundException;
+import Spring.Security.Sample.model.Products;
+import Spring.Security.Sample.repository.ProductsRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

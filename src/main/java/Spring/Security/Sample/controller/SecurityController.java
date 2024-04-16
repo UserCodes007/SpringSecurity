@@ -1,8 +1,8 @@
-package Spring.Security.Sample.Controller;
+package Spring.Security.Sample.controller;
 
-import Spring.Security.Sample.Model.AuthRequest;
-import Spring.Security.Sample.Security.JwtUtils;
-import Spring.Security.Sample.Service.UserService;
+import Spring.Security.Sample.model.AuthRequest;
+import Spring.Security.Sample.security.JwtUtils;
+import Spring.Security.Sample.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

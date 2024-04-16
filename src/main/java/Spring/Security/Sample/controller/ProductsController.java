@@ -1,7 +1,7 @@
-package Spring.Security.Sample.Controller;
+package Spring.Security.Sample.controller;
 
-import Spring.Security.Sample.Model.Products;
-import Spring.Security.Sample.Service.ProductsService;
+import Spring.Security.Sample.model.Products;
+import Spring.Security.Sample.service.ProductsService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -12,12 +12,12 @@ import java.util.List;
 public class ProductsController {
     private ProductsService pService;
 
-    @GetMapping("/all")
+    @GetMapping
     public List<Products> allProducts(){
         return pService.getAll();
     }
 
-    @PostMapping("/add")
+    @PostMapping
     public void addProduct(@RequestBody List<Products> list){
         for(Products i:list)pService.add(i);
     }
@@ -30,7 +30,7 @@ public class ProductsController {
     public void delete(@PathVariable int id){
         pService.delete(id);
     }
-    @PutMapping("/update")
+    @PutMapping
     public void update(@RequestBody Products product){
         pService.update(product);
     }

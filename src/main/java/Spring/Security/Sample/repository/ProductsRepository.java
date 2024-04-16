@@ -1,6 +1,6 @@
-package Spring.Security.Sample.Repository;
+package Spring.Security.Sample.repository;
 
-import Spring.Security.Sample.Model.Products;
+import Spring.Security.Sample.model.Products;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
