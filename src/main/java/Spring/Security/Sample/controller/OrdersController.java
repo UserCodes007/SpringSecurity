@@ -32,7 +32,8 @@ public class OrdersController {
     public Orders get(@PathVariable int id){
         return oService.find(id);
     }
-    /*@DeleteMapping("/{id}")
+    /*
+    @DeleteMapping("/{id}")
     public void delete(@PathVariable int id){
         oService.delete(id);
     }
